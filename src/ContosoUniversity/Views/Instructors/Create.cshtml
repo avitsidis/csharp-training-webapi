@@ -1,4 +1,4 @@
-﻿@model ContosoUniversity.Models.Instructor
+﻿@model ContosoUniversity.Web.Models.Instructor
 
 @{
     ViewData["Title"] = "Create";
@@ -40,7 +40,7 @@
                         <tr>
                             @{
                                 int cnt = 0;
-                                List<ContosoUniversity.Models.SchoolViewModels.AssignedCourseData> courses = ViewBag.Courses;
+                                List<ContosoUniversity.Web.Models.SchoolViewModels.AssignedCourseData> courses = ViewBag.Courses;
 
                                 foreach (var course in courses)
                                 {

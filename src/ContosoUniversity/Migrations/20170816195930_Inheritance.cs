@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace ContosoUniversity.Migrations
+namespace ContosoUniversity.Web.Migrations
 {
     public partial class Inheritance : Migration
     {

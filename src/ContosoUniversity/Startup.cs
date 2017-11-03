@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ContosoUniversity.Data;
+using ContosoUniversity.Web.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace ContosoUniversity
+namespace ContosoUniversity.Web
 {
     public class Startup
     {
