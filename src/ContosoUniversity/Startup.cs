@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ContosoUniversity.Web.Data;
+
 using Microsoft.EntityFrameworkCore;
+using ContosoUniversity.Core;
+using ContosoUniversity.Infrastructure.Data;
 
 namespace ContosoUniversity.Web
 {
@@ -20,12 +18,22 @@ namespace ContosoUniversity.Web
 
         public IConfiguration Configuration { get; }
 
+        private void ConfigureDbContext(IServiceCollection services)
+        {
+            var migrationAssembly = typeof(DbInitializer).Assembly;
+
+            services.AddDbContext<SchoolContext>(
+                o => o.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection"), 
+                    c => c.MigrationsAssembly(migrationAssembly.FullName))
+            );
+
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<SchoolContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            ConfigureDbContext(services);
             services.AddMvc();
         }
 

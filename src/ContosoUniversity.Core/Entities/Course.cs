@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ContosoUniversity.Web.Models
+namespace ContosoUniversity.Core.Entities
 {
     public class Course
     {

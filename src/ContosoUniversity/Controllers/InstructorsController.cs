@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Web.Data;
+
 using ContosoUniversity.Web.Models;
 using ContosoUniversity.Web.Models.SchoolViewModels;
+using ContosoUniversity.Core;
+using ContosoUniversity.Core.Entities;
 
 namespace ContosoUniversity.Web.Controllers
 {

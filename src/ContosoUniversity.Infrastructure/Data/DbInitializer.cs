@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using ContosoUniversity.Web.Models;
+using ContosoUniversity.Core;
+using ContosoUniversity.Core.Entities;
 
-namespace ContosoUniversity.Web.Data
+namespace ContosoUniversity.Infrastructure.Data
 {
     public static class DbInitializer
     {

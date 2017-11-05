@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ContosoUniversity.Web.Models;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Web.Data;
+
 using ContosoUniversity.Web.Models.SchoolViewModels;
 using System.Data.Common;
+using ContosoUniversity.Core;
 
 namespace ContosoUniversity.Web.Controllers
 {

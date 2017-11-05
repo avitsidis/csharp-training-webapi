@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace ContosoUniversity.Web.Migrations
+namespace ContosoUniversity.Infrastructure.Data.Migrations
 {
     public partial class InitialCreate : Migration
     {
